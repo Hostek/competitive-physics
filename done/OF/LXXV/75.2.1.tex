@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1cm, includeheadfoot,
+    headheight=50pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{amsmath, amsthm}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{Linux Libertine O}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+\newcommand{\Name}{Hostek}
+\newcommand{\Email}{your.email@example.com}
+\newcommand{\ProblemNumber}{LXXV OF, etap 2, zadanie 1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\Name \\ \Email}
+\fancyhead[C]{\ProblemNumber}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\fontsize{15}{18}\selectfont
+
+\section*{Problem Statement}
+
+Baron Münchhausen postanowił wznieść się jak najwyżej wykorzystując armatkę wystrzeliwującą pionowo w górę pocisk o masie $m$ z prędkością $v_0$. Baron trzyma w rękach kołowrotek z częściowo nawiniętą nierozciągliwą, wiotką, nieważką liną, której drugi koniec jest przymocowany do pocisku. Kołowrotek ma wbudowany hamulec powodujący, że w trakcie rozwijania liny jej naprężenie wynosi $N_0$ (gdy naprężenie jest mniejsze od $N_0$ lina się nie rozwija, a długość rozwiniętej części pozostaje stała). Początkowa długość rozwiniętej części liny wynosi $l_0$. Barona potraktuj jako bryłę sztywną o masie $M$.
+
+Na jaką maksymalną wysokość wzniesie się baron, zakładając, że całkowita długość liny jest wystarczająco duża. Dodatkowo wyznacz ciepło, jakie wydzieli się na kołowrotku w trakcie wznoszenia się barona.
+
+Pomiń rozmiary liniowe barona, armatki i pocisku oraz opór powietrza. Przyspieszenie ziemskie wynosi $g$. Początkowo baron znajduje się tuż obok armatki; zakładamy, że pocisk nie uderza w niego.
+
+Podaj wyniki liczbowe dla:
+$m = 10 \text{ kg}$, $M = 80 \text{ kg}$, $l_0 = 5 \text{ m}$, $v_0 = 200 \text{ m/s}$, $N_0 = 8000 \text{ N}$, $g = 9,81 \text{ m/s}^2$.
+
+\bigskip
+
+\subsection*{Solution:}
+
+\end{document}
