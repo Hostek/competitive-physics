@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1cm, includeheadfoot,
+    headheight=50pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{amsmath, amsthm}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{Linux Libertine O}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+\newcommand{\Name}{Hostek}
+\newcommand{\Email}{your.email@example.com}
+\newcommand{\ProblemNumber}{XYZ OM, etap A, zadanie B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\Name \\ \Email}
+\fancyhead[C]{\ProblemNumber}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\fontsize{15}{18}\selectfont
+
+\section*{Problem Statement}
+
+\bigskip
+
+\subsection*{Solution:}
+
+\end{document}
