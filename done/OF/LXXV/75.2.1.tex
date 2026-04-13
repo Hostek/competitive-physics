@@ -51,4 +51,81 @@ $m = 10 \text{ kg}$, $M = 80 \text{ kg}$, $l_0 = 5 \text{ m}$, $v_0 = 200 \text{
 
 \subsection*{Solution:}
 
+\subsection*{Etap 1: Swobodny lot pocisku}
+Początkowo pocisk o masie $m$ porusza się swobodnie w górę na odległość równą początkowej długości liny $l_0$. Baron pozostaje na ziemi. Prędkość pocisku $v_1$ w momencie naprężenia liny wyznaczamy z zasady zachowania energii (lub z równań kinematyki):
+\begin{equation}
+v_1^2 = v_0^2 - 2gl_0
+\end{equation}
+
+\subsection*{Etap 2: Ruch z rozwijającą się liną}
+Od momentu naprężenia, lina działa na pocisk w dół siłą hamującą $N_0$, a na barona wywiera siłę $N_0$ skierowaną w górę. Ponieważ $N_0 > Mg$, baron natychmiast odrywa się od ziemi.
+Równania ruchu dla obu ciał przyjmują postać:
+\begin{align}
+\text{Dla pocisku:} \quad m a_m &= -mg - N_0 \implies a_m = -\left(g + \frac{N_0}{m}\right) \\
+\text{Dla barona:} \quad M a_M &= N_0 - Mg \implies a_M = \frac{N_0}{M} - g
+\end{align}
+Prędkości ciał w funkcji czasu $t$ (liczonego od momentu naprężenia liny) wynoszą:
+\begin{align}
+v_m(t) &= v_1 - \left(g + \frac{N_0}{m}\right)t \\
+v_M(t) &= \left(\frac{N_0}{M} - g\right)t
+\end{align}
+Lina przestaje się rozwijać, gdy prędkości obu ciał się wyrównają, czyli $v_m(t_2) = v_M(t_2) = v_2$. Przyrównując równania otrzymujemy czas $t_2$:
+\begin{equation}
+v_1 - \left(g + \frac{N_0}{m}\right)t_2 = \left(\frac{N_0}{M} - g\right)t_2
+\end{equation}
+\begin{equation}
+v_1 = t_2 N_0 \left(\frac{1}{m} + \frac{1}{M}\right) \implies t_2 = \frac{v_1 mM}{N_0(m+M)}
+\end{equation}
+Wspólna prędkość $v_2$ obu ciał w tym momencie wynosi:
+\begin{equation}
+v_2 = a_M t_2 = \left(\frac{N_0 - Mg}{M}\right) \frac{v_1 mM}{N_0(m+M)} = v_1 \frac{m(N_0 - Mg)}{N_0(m+M)}
+\end{equation}
+Wysokość, na jaką zdołał wznieść się baron w tym etapie ($h_{M1}$):
+\begin{equation}
+h_{M1} = \frac{v_2^2}{2a_M} = \frac{v_2^2 M}{2(N_0 - Mg)}
+\end{equation}
+
+\subsection*{Etap 3: Wspólny lot}
+Po wyrównaniu prędkości naprężenie liny wymagane do utrzymania wspólnego ruchu wynosi zero. Zgodnie z warunkami zadania, ponieważ $0 < N_0$, lina przestaje się rozwijać, a jej długość pozostaje stała. Połączony układ porusza się w górę z opóźnieniem grawitacyjnym $g$. 
+Baron wzniesie się o dodatkową wysokość $h_{M2}$:
+\begin{equation}
+h_{M2} = \frac{v_2^2}{2g}
+\end{equation}
+Maksymalna, całkowita wysokość osiągnięta przez barona względem ziemi to $H_M = h_{M1} + h_{M2}$:
+\begin{equation}
+H_M = \frac{v_2^2}{2} \left( \frac{M}{N_0 - Mg} + \frac{1}{g} \right) = \frac{v_2^2}{2} \left( \frac{Mg + N_0 - Mg}{g(N_0 - Mg)} \right) = \frac{v_2^2 N_0}{2g(N_0 - Mg)}
+\end{equation}
+Podstawiając wyrażenie na $v_2$ oraz wprowadzając $v_1^2 = v_0^2 - 2gl_0$, uzyskujemy ostateczny wzór:
+\begin{equation}
+H_M = \frac{\left(v_0^2 - 2gl_0\right) m^2 (N_0 - Mg)}{2g N_0 (m+M)^2}
+\end{equation}
+
+\subsection*{Wydzielone ciepło}
+Ciepło $Q$ wydzielone na hamulcu to praca wykonana przez siłę tarcia (naprężenia $N_0$). Układ pocisk-baron można potraktować w układzie środka masy jak idealnie nieelastyczne zderzenie (ostatecznie brak ruchu względnego obu ciał). Strata energii mechanicznej to po prostu energia kinetyczna ruchu względnego, powiązana z masą zredukowaną układu $\mu = \frac{mM}{m+M}$:
+\begin{equation}
+Q = \frac{1}{2} \mu v_{\text{rel}}^2 = \frac{1}{2} \frac{mM}{m+M} v_1^2 = \frac{mM(v_0^2 - 2gl_0)}{2(m+M)}
+\end{equation}
+Co ciekawe, całkowite wydzielone ciepło nie zależy wprost od siły hamującej $N_0$ (pod warunkiem, że jest wystarczająco duża, by wyrównać prędkości przed rozwinięciem całej liny).
+
+\subsection*{Podstawienie wartości liczbowych}
+Dane: $m = 10 \text{ kg}$, $M = 80 \text{ kg}$, $l_0 = 5 \text{ m}$, $v_0 = 200 \text{ m/s}$, $N_0 = 8000 \text{ N}$, $g = 9,81 \text{ m/s}^2$.
+
+Kwadrat prędkości w momencie uderzenia naciągu:
+\begin{equation*}
+v_1^2 = 200^2 - 2 \cdot 9,81 \cdot 5 = 40000 - 98,1 = 39901,9 \text{ m}^2/\text{s}^2
+\end{equation*}
+
+Maksymalna wysokość barona:
+\begin{align*}
+H_M &= \frac{39901,9 \cdot 10^2 \cdot (8000 - 80 \cdot 9,81)}{2 \cdot 9,81 \cdot 8000 \cdot (10+80)^2} \\
+H_M &= \frac{39901,9 \cdot 100 \cdot 7215,2}{156960 \cdot 8100} \\
+H_M &= \frac{28790018888}{1271376000} \approx \mathbf{22,64 \text{ m}}
+\end{align*}
+
+Ciepło wydzielone na hamulcu:
+\begin{align*}
+Q &= \frac{10 \cdot 80 \cdot 39901,9}{2 \cdot 90} = \frac{800 \cdot 39901,9}{180} \\
+Q &\approx 177341,78 \text{ J} \approx \mathbf{177,3 \text{ kJ}}
+\end{align*}
+
 \end{document}
