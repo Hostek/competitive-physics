@@ -1,0 +1,132 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\newcommand{\punktacja}[2]{%
+    #1 \dotfill #2\par
+}
+
+\begin{document}
+
+\section*{Rozwiązanie zadania 1}
+
+Po osiągnięciu przez pocisk wysokości $l_0$ lina zostaje napięta, a siła naprężenia podrywa barona do góry, jednocześnie spowalniając wznoszenie się pocisku.
+
+Prędkość pocisku $v_1$ tuż przed osiągnięciem wysokości $l_0$ można wyznaczyć z zasady zachowania energii
+\begin{equation}
+    \frac{1}{2} m v_0^2 = m g l_0 + \frac{1}{2} m v_1^2,
+\end{equation}
+zatem
+\begin{equation}
+    v_1 = \sqrt{v_0^2 - 2gl_0}.
+\end{equation}
+Oczywiście jeśli
+\begin{equation}
+    v_0^2 < 2gl_0,
+\end{equation}
+to baron się nie wzniesie, gdyż lina nie zostanie naprężona – pocisk wzniesie się tylko na wysokość mniejszą od $l_0$ (równą $v_0^2/(2g)$).
+
+Po naprężeniu liny, na barona działa lina oraz grawitacja; siła wypadkowa jest równa
+\begin{equation}
+    F_{1B} = N_0 - Mg.
+\end{equation}
+Ponieważ ta siła jest stała, prędkość $v_B$ oraz wysokość $y_B$ barona w zależności od czasu $t$ są dane wzorami
+\begin{align}
+    v_B &= \left( \frac{N_0}{M} - g \right) (t - t_1), \\
+    y_B &= \frac{1}{2} \left( \frac{N_0}{M} - g \right) (t - t_1)^2,
+\end{align}
+gdzie $t_1$ jest chwilą, gdy pocisk osiągnie wysokość $l_0$.
+
+Na pocisk również działa siła napięcia liny oraz siła grawitacji, mają one zgodne zwroty; siła wypadkowa jest równa
+\begin{equation}
+    F_{1P} = -N_0 - mg.
+\end{equation}
+Prędkości $v_P$ oraz wysokość $y_P$ pocisku w zależności od czasu $t$ są dane wzorami
+\begin{align}
+    v_P &= v_1 - \left( \frac{N_0}{m} + g \right) (t - t_1), \\
+    y_P &= l_0 + v_1 (t - t_1) - \frac{1}{2} \left( \frac{N_0}{m} + g \right) (t - t_1)^2.
+\end{align}
+Lina będzie się rozwijała z kołowrotka, a zatem naprężenie nici będzie niezerowe do momentu gdy prędkości barona oraz pocisku się zrównają. Nastąpi to w chwili $t_2$ spełniającej warunek $v_B(t_2) = v_P(t_2)$, czyli
+\begin{equation}
+    \left( \frac{N_0}{M} - g \right) (t_2 - t_1) = v_1 - \left( \frac{N_0}{m} + g \right) (t_2 - t_1).
+\end{equation}
+Stąd
+\begin{equation}
+    t_2 - t_1 = \frac{v_1}{N_0/M + N_0/m}.
+\end{equation}
+Zauważmy, że w powyższym wzorze wielkość w mianowniku odpowiada względnemu przyspieszeniu barona i pocisku, równemu $N_0/\mu$, gdzie $\mu = Mm/(M+m)$ jest tzw. masą zredukowaną.
+
+W chwili $t_2$ baron znajduje się na wysokości $y_{B2}$ równej
+\begin{align}
+    y_{B2} &= \frac{1}{2} \left( \frac{N_0}{M} - g \right) (t_2 - t_1)^2 = \frac{v_1^2}{2} \frac{\frac{N_0}{M}-g}{N_0^2(1/M+1/m)^2},
+\end{align}
+a jego prędkość wynosi
+\begin{equation}
+    v_{B2} = \left( \frac{N_0}{M} - g \right) (t_2 - t_1) = v_1 \frac{N_0/M - g}{N_0(1/M+1/m)}.
+\end{equation}
+W tym samym momencie pocisk znajduje się na wysokości
+\begin{align}
+    y_{P2} &= l_0 + v_1(t_2-t_1) - \frac{1}{2} \left( \frac{N_0}{m} + g \right) (t_2 - t_1)^2 = \notag \\
+    &= l_0 + \frac{v_1^2}{N_0(1/M+1/m)} - \frac{v_1^2}{2} \frac{N_0/m+g}{N_0^2(1/M+1/m)^2}.
+\end{align}
+Dla $t > t_2$ na barona działa tylko siła grawitacji, czyli porusza się on z przyspieszeniem równym $-g$. Maksymalną wysokość baron osiągnie, gdy jego prędkość będzie równa 0, czyli w chwili $t_3$ spełniającej warunek
+\begin{align}
+    t_3 - t_2 &= \frac{v_{B2}}{g} \\
+    &= \frac{v_1}{g} \frac{N_0/M - g}{N_0(1/M+1/m)}.
+\end{align}
+Ostatecznie zatem maksymalna wysokość, na jaką wzniesie się baron, jest równa
+\begin{align}
+    y_{\text{max}} &= y_{B2} + v_{B2} (t_3 - t_2) - \frac{1}{2} g (t_3 - t_2)^2 = \\
+    &= \frac{v_1^2}{2} \frac{\frac{N_0}{M}-g}{N_0^2(1/M+1/m)^2} + \frac{v_1^2}{g} \left( \frac{\frac{N_0}{M}-g}{N_0(1/M+1/m)} \right)^2 - \frac{v_1^2}{2g} \left( \frac{\frac{N_0}{M}-g}{N_0(1/M+1/m)} \right)^2 = \\
+    &= \frac{v_1^2}{2} \frac{\frac{N_0}{M}-g}{N_0^2(1/M+1/m)^2} + \frac{v_1^2}{2g} \frac{(\frac{N_0}{M}-g)^2}{N_0^2(1/M+1/m)^2} = \\
+    &= \frac{v_0^2 - 2gl_0}{2Mg} \frac{(N_0 - Mg)^2}{N_0^2(1/M+1/m)^2},
+\end{align}
+przy czym jest ona osiągana tylko, jeśli są spełnione warunki $v_0^2 > 2gl_0$ oraz $N_0 > Mg$; w przeciwnym razie $y_{\text{max}} = 0 \text{ m}$.
+
+Dla $m = 10 \text{ kg}$, $M = 80 \text{ kg}$, $l_0 = 5 \text{ m}$, $v_0 = 200 \text{ m/s}$, $N_0 = 8000 \text{ N}$ otrzymamy
+\begin{equation}
+    y_{\text{max}} \approx 22,6 \text{ m},
+\end{equation}
+Ciepło wydzielono w trakcie podciągania barona jest równe sile hamującej linę (czyli naprężeniu liny) pomnożonej przez wydłużenie nienawiniętej jej części, czyli
+\begin{align}
+    Q &= N_0((y_{P2} - y_{B2}) - l_0) = \\
+    &= \frac{1}{2} \frac{v_1^2}{1/M + 1/m}.
+\end{align}
+Wydłużenie $\Delta l$ nienawiniętej części liny można też wyznaczyć zauważając, że w chwili $t_1$ prędkość względna pocisku i barona wynosi $v_1$, przyspieszenie względne jest równe $N_0(1/M + 1/m)$ a $t_2 - t_1$ jest dane wzorem (11). Otrzymamy
+\[
+\Delta l = v_1(t_2 - t_1) - \frac{N_0(1/M+1/m)}{2}(t_2-t_1)^2 = \frac{v_1^2}{2N_0(1/M+1/m)}.
+\]
+Zatem znowu
+\begin{equation}
+    Q = \frac{1}{2} \frac{v_1^2}{1/M + 1/m}.
+\end{equation}
+Zauważmy, że jest to energia ruchu względnego pocisku i barona w chwili $t_1$ – ponieważ końcowa prędkość ruchu względnego jest równa 0, cała ta energia jest zamieniana na ciepło.
+
+Dla podanych danych liczbowych otrzymujemy
+\begin{equation}
+    Q \approx 177 \text{ kJ}.
+\end{equation}
+Energia kinetyczna wystrzelonego pocisku wynosi
+\[
+    \frac{1}{2} m v_0^2 = 200 \text{ kJ},
+\]
+zatem większość z tej energii jest zamieniana na ciepło, a nie na wzniesienie barona.
+
+\vspace{1cm}
+
+\subsection*{Punktacja zadania 1.}
+\punktacja{Warunek pozwalający wyznaczyć prędkość pocisku tuż przed naprężeniem liny (wzór (1) lub równoważny -- wraz z uzasadnieniem)}{1 pkt}
+\punktacja{Opis sytuacji zachodzącej po pełnym naprężeniu liny oraz wypadkowe siły działające na barona oraz pocisk (wzory (4), (7) lub równoważne)}{1 pkt}
+\punktacja{Warunek zakończenia wydłużania rozwiniętej części liny (wzór (10) lub równoważny wraz z wyprowadzeniem lub uzasadnieniem)}{1 pkt}
+\punktacja{Prędkość barona w chwili $t_2$ (wzór (13) lub równoważny wraz z wyprowadzeniem lub uzasadnieniem)}{2 pkt}
+\punktacja{Zauważenie, że dalszy (dla $t > t_2$) ruch barona jest rzutem pionowym oraz jawny wynik końcowy na szukaną maksymalną wysokość (wzór (20), wraz z warunkiem jego obowiązywania lub wzór równoważny)}{2 pkt}
+\punktacja{Ciepło wydzielone podczas podciągania barona (wzór (24) lub równoważny wraz z wyprowadzeniem lub uzasadnieniem)}{2 pkt}
+\punktacja{Poprawne wyniki liczbowe (wzory (21) oraz (25))}{1 pkt}
+
+\end{document}
