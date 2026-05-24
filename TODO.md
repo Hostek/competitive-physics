@@ -1,0 +1,3 @@
+- competitive physics: add "test" problems (from cz.1)
+- competitive physics: add "numeryczne" problem
+- competitive physics: add "doświadczalne" problem
